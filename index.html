@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Click Prediction</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Ad Click Prediction</h1>
+    <p>Upload a dataset, explore visualizations, and predict ad clicks.</p>
+  </header>
+
+  <main>
+    <!-- Upload Section -->
+    <section id="upload-section">
+      <h2>Upload Dataset</h2>
+      <input type="file" id="file-upload" accept=".csv" />
+      <button id="upload-button">Upload</button>
+      <p id="upload-status"></p>
+    </section>
+
+    <!-- Visualizations Section -->
+    <section id="visualizations">
+      <h2>Data Visualizations</h2>
+      <div id="charts">
+        <canvas id="chart1"></canvas>
+        <canvas id="chart2"></canvas>
+      </div>
+    </section>
+
+    <!-- Prediction Section -->
+    <section id="predict">
+      <h2>Predict Ad Click</h2>
+      <form id="prediction-form">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <label for="device">Device Type:</label>
+        <select id="device" name="device">
+          <option value="Desktop">Desktop</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Tablet">Tablet</option>
+        </select>
+
+        <label for="time">Time of Day:</label>
+        <select id="time" name="time">
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+          <option value="Night">Night</option>
+        </select>
+
+        <button type="submit">Predict</button>
+      </form>
+      <p id="prediction-result"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Ad Click Prediction Project</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
